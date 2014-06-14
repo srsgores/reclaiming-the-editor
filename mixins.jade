@@ -1,0 +1,12 @@
+- var x = 0
+- var y = 0
+- var z = 0
+- var xIncrement = 1000
+- var yIncrement = 800;
+
+mixin slide(id, customx, customy, customz, rotate)
+	- var totalX = x + xIncrement + customx
+	section.slide.step(id = "#{id}", data-x = "#{xIncrement}", data-y = "#{y + yIncrement + customy}", data-z = "#{z + zIncrement + customz}", data-rotate = "#{rotate}")
+
+mixin header(content)
+	h1(data-jmpress = "fade after 1s step") #{content}

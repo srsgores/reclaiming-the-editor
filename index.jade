@@ -1,0 +1,139 @@
+//
+	Reclaiming the Editor
+
+	@author: Sean Goresht
+	@www: http://seangoresht.com
+	@copyright: COPYRIGHT Fri Jun 13 2014 17:52:36 GMT-0600 (Mountain Daylight Time) DWTFYW License (Do WTF You Want)
+	@license: DWTFYW License (Do WTF You Want)
+
+	Filename: index.jade
+
+	This file is the entry point for the Reclaiming the Editor slides
+
+include mixins
+extends layout
+
+block content
+	article.slides
+		section.slide.step#intro(data-x = "0", data-y = "0", data-z = "0", data-rotate = "0")
+			header(data-jmpress = "fade after 1s step")
+				h1.title Taming the Editor
+				h2.subtitle WordCamp YYC 2014
+				h4 by&nbsp;
+					a(href = "http://seangoresht.com", target = "_sean_website", title = "Visit my Website") Sean Goresht
+			p(data-jmpress = "fade after 1s prev") Learn how to make better use of your editor
+			footer(data-jmpress = "fade after 1s p")
+				button.next-slide(title = "Learn Now") Learn
+					i.icon-arrow-right
+				div(role = "alert")
+					small (Use your arrow keys or swipe to navigate the slides)
+		section.slide.step#overview(data-x = "1500", data-y = "0", data-z = "50", data-rotate = "0")
+			h1(data-jmpress = "fade after 1s step") Overview
+			p(data-jmpress = "fade") Let's Talk About:
+			ol
+				li(data-jmpress = "fade") The Current WordPress Editor
+				ol
+					li(data-jmpress = "fade") What's Missing?
+					li(data-jmpress = "fade") Content Revisioning
+					li(data-jmpress = "fade") Basic Stylesheet
+					li(data-jmpress = "fade") Previewing
+				li(data-jmpress = "fade") Current Content Strategies
+				li(data-jmpress = "fade") Spiffying up the Editor
+					ol
+						li(data-jmpress = "fade")
+							details(open)
+								summary Open-source Editors
+								ol
+									li Scribe
+									li CKEditor
+									li CodeMirror
+						li(data-jmpress = "fade")
+							details(open)
+								summary Commercial Editors
+								ol
+									li(data-jmpress = "fade") WP Zoom
+									li(data-jmpress = "fade") Visual Composer
+									li(data-jmpress = "fade") WP Bakery
+				li(data-jmpress = "fade") Conclusion
+		section.slide.step#current-wordpress-editor(data-x = "3000", data-y = "0", data-z = "300", data-rotate = "0")
+			header
+				h1(data-jmpress = "fade after 1s step") The Current Wordpress Editor
+			figure(data-jmpress = "fade")
+				img(src = "img/current-wp-editor.png", alt = "Current WordPress TinyMCE Editor")
+				figcaption Current WordPress Editor
+			section.slide.step#problems(data-x = "0", data-y = "800", data-z = "0", data-rotate = "0")
+				header
+					h1(data-jmpress = "fade after 1s step") Problems
+				ul
+					li(data-jmpress = "fade") Unpredictable Markup
+					li(data-jmpress = "fade") Unsemantic Markup
+					li(data-jmpress = "fade") Not WYSIWYG
+					li(data-jmpress = "fade") Uncomprehensive of Styles
+		section.slide.step#about-me(data-x = "3000", data-y = "800", data-z = "4000", data-rotate = "0")
+			header
+				h1(data-jmpress = "fade after 1s step") About Me
+			ul
+				li(data-jmpress = "fade")
+					strong Front-end&nbsp;
+					| web developer
+				li(data-jmpress = "fade") I write CRM software
+				li(data-jmpress = "fade") Spent a lot of time on WP in my last job
+				li(data-jmpress = "fade") Follow me on
+					a(href = "https://twitter.com/SGoresht", title = "Follow Me on Twitter", target="sean_twitter") Twitter
+			footer
+				a(href = "https://github.com/srsgores", title = "I'm also on GitHub", target = "_sean_github", data-jmpress = "fade") (You can also find me on GitHub)
+		section.slide.step#the-objective(data-x = "6000", data-y = "0", data-z = "1000", data-rotate = "0")
+			header
+				h1(data-jmpress = "fade after 1s step") Today's Objective
+			a(data-jmpress = "fade", href="http://melaniemorstad.seangoresht.com/wp-admin/post.php?post=17&action=edit", target="_sean-admin") Demo&nbsp;
+				i.icon-link
+		section.slide.step#the-code(data-x = "5500", data-y = "1500", data-z = "0", data-rotate = "0")
+			header
+				h1(data-jmpress = "fade after 1s step") The Trick
+			p(data-jmpress = "fade after 1s prev") Feel free to use any of this in your own custom templates:
+			a(href = "https://gist.github.com/srsgores/7e57d67782bead67c3b3", title = "Editing the Functions.php file", target = "_the-gist") See the Gist
+		section.slide.step#clean-html-tools(data-x = "8000", data-y = "0", data-z = "0", data-rotate = "0")
+			header
+				h1(data-jmpress = "fade after 1s step") Getting Cleaner HTML
+			ul(data-jmpress = "fade after 1s previous")
+				li
+					a(href = "http://word2cleanhtml.com/", target = "word_cleanup", title = "Clean up Copy-Paste on Word Clipboard Text") http://word2cleanhtml.com/
+				li
+					a(href = "http://www.tablesgenerator.com/html_tables", target = "generating_tables", title = "Generating Tables") Table Generator
+		section.slide.step#visual-building-tools(data-x = "15000", data-y = "1500", data-z = "-500", data-rotate = "0")
+			header
+				h1(data-jmpress = "fade after 1s step") Visual Building Tools
+			p(data-jmpress = "fade") There are many tools out there that all do the same thing.  They're mostly pretty good, but they can be pricy if you don't like spending money:
+			ul
+				li
+					a(href="http://vc.wpbakery.com/", title="Visual Composre for Wordpress", target="_visual_composer") Visual Composer
+				li
+					a(href = "http://codecanyon.net/item/ether-content-builder-wordpress-plugin/1690784", title="Ether Builder for Visual Composer", target="_blank") Ether Builder
+				li
+					a(href = "http://www.wpzoom.com/builder/", target = "_zoom_builder", title = "Zoom Builder") Zoom Builder
+				li
+					a(href = "http://www.gravityforms.com/", title="Gravity Forms", target="gravity_forms") Gravity Forms
+				li
+					a(href = "http://ncrafts.net/formcraft/", title = "Formcraft Generated Forms", target="formcraft") FormCraft
+				li
+					a(href = "http://codecanyon.net/item/live-composer-frontend-wordpress-page-builder/6594028") Live Composer
+			section.slide.step#problem-with-visual-tools(data-x = "0", data-y = "1500", data-z = "0", data-rotate = "90")
+				header
+					h1(data-jmpress = "fade after 1s step") But This Can Be a Problem
+				p(data-jmpress = "fade") All of these tools will eventually cause
+					strong &nbsp;Style bloat
+					|.
+				p(data-jmpress = "fade") Remember that
+					em bloated
+					| &nbsp;WordPress site?
+				footer
+					p So I think that
+						strong &nbsp;rolling your own solution is best
+			section.slide.step.title-slide#demo(data-x = "0", data-y = "5000", data-z = "0", data-rotate = "0")
+				header(data-jmpress = "fade after 1s step")
+					h1 Demo
+					i.icon-display
+			section.slide.step.title-slide#questions(data-x = "-1000", data-y = "0", data-z = "0", data-rotate = "0")
+				h1(data-jmpress = "fade after 1s step") Questions?
+				i.icon-question
+

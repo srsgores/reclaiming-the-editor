@@ -1,0 +1,18 @@
+{
+	"name": "reclaiming-the-editor",
+	"description": "Understanding how to optimize the Wordpress content editor for a better blogging experience",
+	"author":  {
+		"name": "Sean Goresht",
+		"email": "seangores@gmail.com",
+		"url": "http://seangoresht.com"
+	},
+	"licenses": [
+		{
+			"type": "DWTFYW License (Do WTF You Want)"
+		}
+	],
+	"repository": "",
+	"readme": "Understanding how to optimize the Wordpress content editor for a better blogging experience",
+	"version": "1.0.0",
+	"dependencies": {}
+}

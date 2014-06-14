@@ -1,0 +1,9 @@
+{
+	"name":         "Reclaiming the Editor",
+	"version":      "1.0.0",
+	"dependencies": {
+		"sassboilerplate": "*",
+		"jQuery": "*",
+		"modernizr": "*"
+	}
+}

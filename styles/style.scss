@@ -1,0 +1,86 @@
+/*
+@package: Reclaiming the Editor
+
+@author: Sean Goresht
+@www: http://seangoresht.com
+
+@copyright: COPYRIGHT Fri Jun 13 2014 17:52:36 GMT-0600 (Mountain Daylight Time) DWTFYW License (Do WTF You Want)
+@license: DWTFYW License (Do WTF You Want)
+
+Filename: style.scss
+
+This file is responsible for all styles on the Reclaiming the Editor app.  Styles should be compiled using compass and sass.
+*/
+
+@import "../bower_components/sassboilerplate/sass/style.scss";
+@import "partials/_animations.scss";
+
+/* =============================================================================
+Variables
+========================================================================== */
+$slideWidth: 50em;
+
+.slide {
+	// style slides here
+	@extend %normal-padding;
+	min-width: $slideWidth;
+	@media screen and (max-width: $breakpointMain) {
+		min-width: $slideWidth / 2;
+	}
+	@extend %bordered;
+	@extend %transition-all;
+	&.title-slide {
+		#{headings()} {
+			font-size: 4em;
+			@extend %centred;
+			@extend %mini-margin-bottom;
+			margin-top: 0;
+		}
+		i {
+			font-size: 5.4em;
+			@extend %centred, %block;
+		}
+	}
+}
+
+footer[role="contentinfo"] {
+	@extend %centred;
+	@extend %row-width;
+	@extend %absolute;
+	bottom: 0;
+	left: 0;
+}
+
+button {
+	#{$icons} {
+		@extend %mini-margin-left;
+	}
+}
+
+.button {
+	@extend button;
+}
+
+#intro {
+	@extend %centred;
+	header {
+		@extend %normal-margin-top-bottom;
+	}
+}
+
+footer {
+	@extend %centred;
+}
+
+details {
+	summary {
+		cursor: pointer;
+		@extend %transition-all;
+		&:hover {
+			background: $bodyBackground - 10;
+		}
+	}
+	ol {
+		@extend %fadeIn;
+	}
+}
