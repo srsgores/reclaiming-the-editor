@@ -168,4 +168,3 @@ node_modules
 temp
 sass/*.css
 .sass-cache
-bower_components
